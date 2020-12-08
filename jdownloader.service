@@ -1,0 +1,14 @@
+[Unit]
+Description=JDownloader 2
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=java -Djava.awt.headless=true -jar /opt/JDownloader/JDownloader.jar
+PIDFile=/opt/JDownloader/JDownloader.pid
+RemainAfterExit=yes
+User=theo
+Group=theo
+
+[Install]
+WantedBy=multi-user.target
